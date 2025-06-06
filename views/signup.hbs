@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="/signup.css">
+</head>
+<body>
+    <h1>Welcome to Signup Page</h1>
+
+    {{#if msg}}
+        <div class="flashMessage">
+            {{msg}}
+        </div>
+    {{/if}}
+
+    <div class="signup">
+        <div class="signupItem navItem1"></div>
+
+        <div class="signupItem navItem2">
+            <div class="signupOptions">
+                <form class="signupForm" action="/signup" method="POST">
+                    <div class="signupCreds">
+                        <input type="text" placeholder="Enter Email" name="email"><br>
+                        <input type="text" placeholder="Enter Password" name="password"><br>
+                        <button class="signupBtn" type="submit">Signup</button>
+                    </div>
+                </form>
+                <div class="login">
+                    <hr class="horizontalRule">
+                    <div class="loginDetails">
+                        <button class="loginBtn">
+                        <a href="/login">Login</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

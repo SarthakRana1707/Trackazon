@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/addproduct.css">
+</head>
+<body>
+    {{>navbar isAdmin=isAdmin cartCount=cartCount}}
+
+    <div class="container">
+    <form action="/admin/edit" method="POST">
+    <div class="productBox">
+        <img style="width: 300px;" src="{{product.imageUrl}}" alt="">
+        <div class="productBoxItem">
+                <label class="title" for="name">Name: </label>
+                <input class="inputElement" type="text" placeholder="Enter Name" id="name" name="name" value="{{product.name}}"><br>
+        </div>
+        <div class="productBoxItem">
+            <label class="title" for="price">Price: </label>
+            <input class="inputElement" type="price" placeholder="Enter Price" id="Price" name="price" value="{{product.price}}"><br>
+        </div>
+        <div class="productBoxItem">
+            <label class="title" for="imgUrl">Image Url: </label>
+            <input class="inputElement" type="text" placeholder="Enter Image Url" id="img" name="imageUrl" value="{{product.imageUrl}}"><br>
+        </div>
+        <div class="productBoxItem">
+            <label class="title" for="description">Description: </label>
+            {{#each product.description as |desc|}}
+                <textarea class="inputElement"  id="description" name="description" rows="5" cols="20">{{desc}}</textarea>
+            {{/each}}
+        </div>
+        <input type="hidden" name="id" value="{{product._id}}">
+        <div class="productBtn">
+            <button  type="submit">Edit Product</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    <button class="logoutBtn">
+        <a href="/logout">Logout</a>
+    </button>
+</body>
+</html>

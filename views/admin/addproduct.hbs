@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/addproduct.css">
+</head>
+<body>
+    {{>navbar isAdmin=isAdmin cartCount=cartCount}}
+
+    <div class="container">
+    <form action="/admin/add-product" method="POST">
+    <div class="productBox">
+        <div class="productBoxItem">
+                <label class="title" for="name">Name: </label>
+                <input class="inputElement" type="text" placeholder="Enter Name" id="name" name="name"><br>
+        </div>
+        <div class="productBoxItem">
+            <label class="title" for="price">Price: </label>
+            <input class="inputElement" type="price" placeholder="Enter Price" id="  Price" name="price"><br>
+        </div>
+        <div class="productBoxItem">
+            <label class="title" for="imgUrl">Image Url: </label>
+            <input class="inputElement" type="text" placeholder="Enter Image Url" id="img" name="imageUrl"><br>
+        </div>
+        <div class="productBoxItem">
+            <label class="title" for="description">Description: </label>
+            <div class="descriptionBox inputElement">
+                <input type="text" id="descriptionInp" placeholder="Enter a new description">
+                <button class="descriptionBtn">Add</button>
+            </div>
+            <div class="descriptionList inputElement"></div>
+            {{!-- <textarea class="inputElement" id="description" name="description" rows="10" cols="20">....Enter the Product Description</textarea> --}}
+        </div>
+        <div class="productBtn">
+            <button  type="submit">Add Product</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    <button class="logoutBtn">
+        <a href="/logout">Logout</a>
+    </button>
+    <script>
+        let descriptionBtn = document.querySelector('.descriptionBtn');
+        let descriptionInp = document.querySelector('#descriptionInp');
+        let descriptionList = document.querySelector('.descriptionList');
+
+        descriptionBtn.addEventListener('click',(ev)=>{
+            ev.preventDefault();
+            console.log(descriptionInp.value);
+            let v = descriptionInp.value;
+            descriptionInp.value = '';
+            if (!v) return;
+            let textarea = document.createElement('textarea');
+            textarea.classList.add('inputElement');
+            textarea.classList.add('description');
+            textarea.setAttribute('name','description');
+            textarea.value = v;
+            descriptionList.appendChild(textarea);
+        })
+    </script>
+</body>
+</html>

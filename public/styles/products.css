@@ -1,0 +1,205 @@
+.productDetails{
+    display: flex;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+}
+
+.productItem{
+    /* display: flex; */
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    padding-bottom: 20px;
+}
+
+.productItem:last-child{
+    border-bottom: none;
+}
+
+.productItem::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image{
+    height: 300px;
+    /* width: 300px; */
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+}
+
+.info{
+    flex-grow: 1;
+    display: flex;
+    float: right;
+    width: 70%;
+}
+
+.productInfo{
+    flex-grow: 4;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.priceInfo{
+    flex-grow: 1;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btnGroup{
+    display: flex;
+}
+
+.btn{
+    flex-grow: 1;
+    background-color: rgb(79, 0, 110);
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.productInfoLink,
+.productInfoLink:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.productInfoLink:link{
+    text-decoration: none;
+    color: black;
+}
+
+.productInfoLink:hover .name{
+    color: blue;
+}
+
+/* CSS FOR PAYMENT AND REVIEWS SECTION */
+.impDetails{
+    /* border: 1px solid black; */
+    padding-top: 10px;
+}
+
+.reviews{
+    width: 70%;
+    float: right;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.payment{ 
+    width: 25%;
+    float: left;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.buynowBtn,
+.addtocartBtn{
+    width: 40%;
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+    border: 0px;
+    cursor: pointer;
+}
+
+.writeReview,
+.submitReviewBtn,
+.deleteReviewBtn{
+    font-size: 12px;
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+    border: 0px;
+    cursor: pointer;
+    background-color: rgba(15, 106, 209, 0.911);
+    margin: 5px;
+}
+
+.deleteReviewBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 166, 0, 0.911);
+}
+
+.deleteReviewBtn a{
+    text-decoration: none;
+    color: white;
+}
+
+.deleteReviewBtn a:link,
+.deleteReviewBtn a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.deleteReviewBtn:hover{
+    cursor: pointer;
+}
+
+.buynowBtn{
+    background-color: rgba(255, 166, 0, 0.911);
+}
+
+.addtocartBtn{
+    background-color: rgb(49, 49, 207, 0.726);
+}
+
+.hide{
+    display: none;
+}
+
+.writeReview{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.title,
+.description{
+    font-size: 20px;
+    width: 40%;
+    padding: 4px;
+    margin: 5px;
+}
+
+.reviewListItem{
+    font-size: 20px;
+    padding: 4px;
+    border-bottom: 1px solid black;
+    margin: 5px 0;
+    /* box-shadow: 3px 3px 10px black; */
+    width: 80%;
+    list-style: none;
+    position: relative;
+}
+
+.reviewTitle{
+    font-size: 20px;
+    text-decoration: solid;
+    font-weight: 700;
+}
+
+.reviewDescription{
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.profileHeading,
+.signupHeading,
+.loginHeading{
+    color: rgb(68, 68, 156);
+}
+
+.login{
+    display: flex;
+    width: 800px;
+    margin: 200px auto;
+    align-items: center;
+}
+
+.loginItem{
+    width: 50%;
+}
+
+.navItem1{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQylC4daeFfPl1E0c4YeRfWQiHpl6e_OZ5ugiAz-o_M1OUzNjGNpfinrQX9RHXQVgegeMo&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.navItem1,
+.navItem2{
+    height: 300px;
+}
+
+.loginOptions{
+    border: 1px solid #ccc;
+    width: 100%;
+    align-content: space-around;
+    padding: 30px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.horizontalRule{
+    border-top: 1px solid #ccc;
+}
+
+.loginForm,
+.signup{
+    height: 50%;
+}
+
+.loginBtn:hover,
+.signupBtn:hover{
+    cursor: pointer;
+}
+
+.loginForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginCreds{
+    width: 300px;
+    padding: 5px;
+}
+
+.loginUsername,
+.loginPassword,
+.loginBtn,
+.signupBtn{
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.loginBtn{
+    margin-bottom: 20px;
+}
+
+.loginUsername,
+.loginPassword{
+    width: 95%;
+    margin: 10px 0;
+}
+
+.loginBtn{
+    background-color: #1877f2;
+    border-radius: 1px;
+    border: 0px;
+    color: white;
+    width: 100%;
+}
+
+.signupBtn{
+    background-color: #42b72a;
+    border-radius: 1px;
+    border: 0px;
+    color: white;
+    width: 70%;
+    margin-top: 20px;
+}
+
+.signupBtn a:link,
+.signupBtn a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.signupDetails{
+    display: flex;
+    justify-content: center;
+}

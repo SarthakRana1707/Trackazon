@@ -1,0 +1,63 @@
+*{
+    font-family: sans-serif;
+}
+
+.productBoxItem{
+    width: 80%;
+    margin: 10px auto;
+    /* border: 1px solid black; */
+    /* background-color: orange; */
+}
+
+.title{
+    float: left;
+    font-size: 24px;
+}
+
+.inputElement{
+    float: right;
+    width: 70%;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.productBoxItem::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.productBtn{
+    width: 80%;
+    margin: auto;
+}
+
+.productBtn button{
+    width: 100%;
+    font-size: 24px;
+    border: 0px;
+    background-color: rgb(79,9,110);
+    color: white;
+    padding: 5px;
+}
+
+.productBtn button:hover{
+    cursor: pointer;
+}
+
+.description{
+   width: 100%;
+   font-size: 24px; 
+}
+
+.descriptionBox input{
+    font-size: 24px;
+    width: 80%;
+    padding: 5px;
+}
+
+.descriptionBtn{
+    font-size: 24px;
+    width: 15%;
+    padding: 5px;
+}

@@ -1,0 +1,29 @@
+    <div class="impDetails">
+            <section class="payment">
+                <button productId="{{this.product._id}}" class="addtocartBtn">Add to Cart</button>
+                <button class="buynowBtn">Buy Now</button>
+            </section>
+            <section class="reviews">
+                <button class="writeReview">Write a Review</button>
+                <div class="inputReview hide">
+                    <input type="text" placeholder="Enter Title" class="title"><br>
+                    <textarea class="description">Enter Description</textarea><br>
+                    <input type="hidden" class="productId" value="{{product._id}}"></input>
+                    <button class="submitReviewBtn">Post Review</button>
+                </div>
+                <h4>Latest Reviews</h4>
+                <ul class="reviewsList">
+                    {{#each this.product.reviews as |r|}}
+                        <li class="reviewListItem">
+                            <div class="reviewTitle">{{r.title}}</div>
+                            <div class="reviewDescription">{{r.description}}</div>
+                                {{#if ../isAdmin}}
+                                    <button class="deleteReviewBtn">
+                                        <a href="/admin/deletereview/?id={{r._id}}&productId={{../product._id}}">Delete</a>
+                                    </button>
+                                {{/if}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </section>
+    </div>

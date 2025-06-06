@@ -1,0 +1,100 @@
+.cartItems{
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.newCartItem{
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.newCartItem::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.btnGrp{
+    float: left;
+    width: 30%;
+    /* border: 1px solid red; */
+}
+
+.itemDetails{
+    float: right;
+    width: 65%;
+    /* border: 1px solid orange; */
+}
+
+.image{
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.totalPrice{
+    width: 250px;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.priceName,
+.priceValue{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.deleteBtn{
+    font-size: 18px; 
+    border: 0px;
+    padding: 5px;
+}
+
+.deleteBtn:hover{
+    cursor: pointer;
+}
+
+
+.payment{
+    font-size: 24px; 
+    border: 0px;
+    padding: 5px;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.payment:hover{
+    cursor: pointer;
+}
+
+.increaseQty,
+.decreaseQty{
+    border: 0px;
+    background-color: transparent;
+}
+
+.updateQty{
+    font-size: 18px;
+    border: 0px;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.updateQty:hover{
+    cursor: pointer;
+}

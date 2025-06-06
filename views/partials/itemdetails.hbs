@@ -1,0 +1,21 @@
+<div class="productItem">
+    <div class="image" style="background-image: url({{this.product.imageUrl}});">
+        </div>
+        <div class="info">
+            <div class="productInfo">
+                <h2 class="name">
+                    {{this.product.name}}
+               </h2>
+                <ul class="descriptionList">
+                    {{#each this.product.description as |desc|}}
+                        <li>{{desc}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="priceInfo">
+                <div class="price">
+                $ {{this.product.price}}
+                </div>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<nav class="navBar">
+        <div class="navItem navItem-1">
+            <img class="navImg" src="https://cb3img.s3.ap-south-1.amazonaws.com/img/cblogo.webp" alt="">
+            <a class="navLink" href="#">Home</a>
+            <a class="navLink" href="/shop/products">Products</a>
+            <a class="navLink" href="/shop/cart">
+                <span class="cartName">
+                Cart
+                    {{#if this.cartCount}}
+                        <div class="cartCount">{{this.cartCount}}</div>
+                        {{else}}
+                        <div class="cartCount"></div>
+                    {{/if}}
+                </span>
+            </a>
+            <a class="navLink" href="#">Profile</a>
+            {{#if this.isAdmin}}
+                <a class="navLink" href="/admin/add-product">Add Product</a>
+                <a class="navLink" href="/admin/products">Admin Products</a>
+            {{/if}}
+        </div>
+        <div class="navItem">
+            <input type="text" placeholder="Search for Products and more">
+        </div>
+    </nav>
